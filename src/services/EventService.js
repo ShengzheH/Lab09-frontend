@@ -14,6 +14,12 @@ export default {
     return apiClient.get('/events?_limit=' + perPage + '&_page=' + page)
   },
   getEvent(id) {
-    return apiClient.get('/events/' + id)
+    return apiClient.get('/event/' + id)
+  },
+  saveEvent(event) {
+    return apiClient.post('/event/', event)
+  },
+  saveOrganizer(organizer) {
+    return apiClient.post('/organizer/', organizer)
   }
 }
